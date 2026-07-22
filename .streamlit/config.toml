@@ -1,0 +1,20 @@
+# Native Streamlit theming.
+#
+# This is the correct, robust way to recolor built-in widgets like
+# st.progress, st.button, st.selectbox, and the loading spinner -- it uses
+# Streamlit's own theme engine rather than custom CSS trying to target
+# internal DOM classes that can change between Streamlit versions.
+#
+# Brand palette (grounded in Pakistani banknote design):
+#   primaryColor            -- deep emerald, evokes banknote-green security ink
+#   backgroundColor         -- warm ivory "paper" tone
+#   secondaryBackgroundColor -- slightly deeper paper tone for cards/widgets
+#   textColor               -- warm near-black ink
+
+[theme]
+base = "light"
+primaryColor = "#1F5C4A"
+backgroundColor = "#FAF8F2"
+secondaryBackgroundColor = "#F1ECDE"
+textColor = "#1C1B17"
+font = "sans serif"

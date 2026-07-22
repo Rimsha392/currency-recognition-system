@@ -1,0 +1,40 @@
+----------------------------------------------------------------------
+DATASET SPLIT REPORT
+Generated: 2026-07-19 02:24:20
+Source: C:\Users\USER\Documents\ai-currency-recognition\dataset\merged
+Output: C:\Users\USER\Documents\ai-currency-recognition\dataset\split
+Split ratio (train/val/test): 70% / 15% / 15%
+Random state: 42
+----------------------------------------------------------------------
+
+PER-CLASS SPLIT COUNTS
+----------------------------------------------------------------------
+Class            Train       Val      Test     Total
+----------------------------------------------------------------------
+10                 383        82        82       547
+20                 354        76        76       506
+50                 345        74        74       493
+100                393        84        84       561
+500                366        78        79       523
+1000               324        69        70       463
+5000               363        78        77       518
+----------------------------------------------------------------------
+TOTAL             2528       541       542      3611
+----------------------------------------------------------------------
+
+SPLIT SIZE SUMMARY
+----------------------------------------------------------------------
+Train images: 2528
+Val images:   541
+Test images:  542
+Grand total:  3611
+----------------------------------------------------------------------
+
+VERIFICATION
+----------------------------------------------------------------------
+Total images found in dataset/merged/: 3611
+Total images copied across train+val+test: 3611
+PASS: split total matches merged dataset total exactly. No files lost or duplicated.
+
+Expected total (3611) matches dataset/merged/ exactly.
+----------------------------------------------------------------------

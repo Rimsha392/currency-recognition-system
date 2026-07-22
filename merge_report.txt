@@ -1,0 +1,37 @@
+----------------------------------------------------------------------
+DATASET MERGE REPORT
+Generated: 2026-07-19 02:16:01
+Source: C:\Users\USER\Documents\ai-currency-recognition\dataset\data-rescaled
+Destination: C:\Users\USER\Documents\ai-currency-recognition\dataset\merged
+----------------------------------------------------------------------
+
+MERGED CLASS COUNTS
+----------------------------------------------------------------------
+Class             Front    Back   Total
+----------------------------------------------------------------------
+10                  268     279     547
+20                  248     258     506
+50                  240     253     493
+100                 280     281     561
+500                 262     261     523
+1000                227     236     463
+5000                257     261     518
+----------------------------------------------------------------------
+Total merged classes: 7
+Total merged images: 3611
+----------------------------------------------------------------------
+
+SKIPPED SOURCE FOLDERS (name didn't match '<denom>_front/back')
+----------------------------------------------------------------------
+None.
+----------------------------------------------------------------------
+
+SKIPPED FILES (copy failed)
+----------------------------------------------------------------------
+None.
+----------------------------------------------------------------------
+
+NOTE: Original dataset/<denom>_front and <denom>_back folders are
+untouched -- all files above were COPIED, not moved. The merged
+folders under dataset/merged/ are what train.py will consume next.
+----------------------------------------------------------------------

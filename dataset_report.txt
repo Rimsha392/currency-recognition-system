@@ -1,0 +1,118 @@
+----------------------------------------------------------------------
+DATASET INSPECTION REPORT
+Generated: 2026-07-18 17:45:44
+----------------------------------------------------------------------
+
+CLASS IMAGE COUNTS
+----------------------------------------------------------------------
+Class                   Images
+----------------------------------------------------------------------
+1000_back                  236
+1000_front                 227
+100_back                   281
+100_front                  280
+10_back                    279
+10_front                   268
+20_back                    258
+20_front                   248
+5000_back                  261
+5000_front                 257
+500_back                   261
+500_front                  262
+50_back                    253
+50_front                   240
+----------------------------------------------------------------------
+Total classes: 14
+Total valid images: 3611
+----------------------------------------------------------------------
+
+CORRUPTED / UNREADABLE IMAGES
+----------------------------------------------------------------------
+None found.
+----------------------------------------------------------------------
+Corrupted images: 0
+Valid images: 3611
+----------------------------------------------------------------------
+
+CLASS BALANCE STATISTICS
+----------------------------------------------------------------------
+Largest class size:  281
+Smallest class size: 227
+Mean images/class:   257.9
+Std deviation:       16.4
+Imbalance ratio (largest/smallest): 1.24x
+-> Ratio is within a reasonable range; standard training should be fine.
+----------------------------------------------------------------------
+
+IMAGE DIMENSIONS
+----------------------------------------------------------------------
+Unique resolutions found: 3
+Top 10 most common resolutions (width x height : count):
+  832x624 : 2304
+  624x832 : 1303
+  653x490 : 4
+----------------------------------------------------------------------
+
+COLOR MODES
+----------------------------------------------------------------------
+  RGB: 3611
+----------------------------------------------------------------------
+
+UNUSUALLY SMALL IMAGES (< 100px in either dimension)
+----------------------------------------------------------------------
+None found.
+----------------------------------------------------------------------
+Count: 0
+----------------------------------------------------------------------
+
+EXACT DUPLICATE IMAGES (identical file content, by MD5 hash)
+----------------------------------------------------------------------
+None found.
+----------------------------------------------------------------------
+Duplicate groups: 0
+Redundant files (extras beyond first copy): 0
+----------------------------------------------------------------------
+
+FRONT/BACK MERGE RECOMMENDATION
+----------------------------------------------------------------------
+Per-side counts vs. merged (denomination-only) counts:
+  Class              Images
+  1000_back             236
+  1000_front            227
+  100_back              281
+  100_front             280
+  10_back               279
+  10_front              268
+  20_back               258
+  20_front              248
+  5000_back             261
+  5000_front            257
+  500_back              261
+  500_front             262
+  50_back               253
+  50_front              240
+
+  Denomination (merged)       Images
+  10                             547
+  20                             506
+  50                             493
+  100                            561
+  500                            523
+  1000                           463
+  5000                           518
+
+RECOMMENDATION: Merge '<denom>_front' and '<denom>_back' into a single
+'<denom>' class for training (e.g. '500_front' + '500_back' -> '500').
+
+Reasoning:
+  1. The task is denomination recognition, not side recognition --
+     merging aligns the label space with the actual product goal.
+  2. It doubles effective samples per class with zero new data collection,
+     which matters given how small each per-side folder is.
+  3. Denomination-specific visual cues (color, size, printed number,
+     security features) are shared across front/back and are exactly
+     what transfer-learned CNN features are good at picking up on,
+     even amid the artwork differences between sides.
+  4. Only keep front/back separate if a future feature explicitly
+     requires knowing which side is shown -- out of scope for this MVP.
+----------------------------------------------------------------------
